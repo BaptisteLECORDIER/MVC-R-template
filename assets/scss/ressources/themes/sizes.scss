@@ -1,0 +1,31 @@
+.height {
+    @each $size, $i in $specific_sizes {
+        &-#{$size} {
+            height: $i;
+        }
+    }
+}
+
+.max-height {
+    @each $size, $i in $specific_sizes {
+        &-#{$size} {
+            max-height: $i;
+        }
+    }
+}
+
+.width {
+    @each $size, $i in $specific_sizes {
+        &-#{$size} {
+            width: $i;
+        }
+    }
+}
+
+.max-width {
+    @each $size, $i in $specific_sizes {
+        &-#{$size} {
+            max-width: $i;
+        }
+    }
+}

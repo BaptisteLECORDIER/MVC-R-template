@@ -1,0 +1,7 @@
+.opacity {
+    @each $percent, $i in $percents {
+        &-#{$percent} {
+            opacity: $i;
+        }
+    }
+}

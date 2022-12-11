@@ -1,0 +1,73 @@
+@keyframes btn-hover-arrow {
+    from {
+        opacity: 0;
+        right: 20px;
+    }
+
+    to {
+        opacity: 100;
+        right: -10px;
+    }
+}
+
+@keyframes btn-hover-arrow-reverse {
+    from {
+        opacity: 100;
+        right: -10px;
+    }
+
+    to {
+        opacity: 0;
+        right: 20px;
+    }
+}
+
+@keyframes btn-rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+.btn {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    
+    display: flex;
+    justify-content: space-between;
+    
+    &-rotate:hover > * {
+        animation-name: btn-rotate;
+        animation-duration: 0.15s;
+        animation-fill-mode: forwards
+    }
+
+    & .btn__arrow {
+        position: relative;
+        opacity: 0;
+        top: 2px;
+    }
+
+    &:hover .animated-arrow {
+        animation-name: btn-hover-arrow;
+        animation-duration: 0.25s;
+        animation-fill-mode: forwards
+    }
+
+    & .animated-arrow {
+        animation-name: btn-hover-arrow-reverse;
+        animation-duration: 0.25s;
+        animation-fill-mode: forwards
+    }
+
+    & p {
+        position: relative;
+        top: 2px;
+        margin-right: 0px;
+    }
+}

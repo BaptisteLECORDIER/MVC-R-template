@@ -1,0 +1,91 @@
+.search-bar {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    background-color: map-get($colors, 'white');;
+    
+    border: map-get($colors, 'gray') 1px solid;
+    & .btn {
+        padding: 10px;
+
+    }
+    & input {
+        border: none;
+        width: 200px;
+        padding-left: 20px;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.searchbar-dynamic-focus {
+    border: map-get($colors, 'main') 1px solid;
+    & input::placeholder {
+        color: map-get($colors, 'main');
+    }
+}
+
+.btn-search-bar-cross {
+    overflow: hidden;
+}
+
+
+@keyframes search-bar-cross-not-visible {
+    from {
+        width: 300px;
+    }
+    to {
+        width: 270px;
+    }
+}
+
+@keyframes search-bar-cross-visible {
+    from {
+        width: 270px;
+    }
+    to {
+        width: 300px;
+    }
+}
+
+@keyframes btn-search-bar-cross-visible {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 30px;
+    }
+}
+
+@keyframes btn-search-bar-cross-not-visible {
+    from {
+        width: 30px;
+    }
+    to {
+        width: 0px;
+    }
+}
+
+.search-bar-cross-not-visible {
+    animation-name: search-bar-cross-not-visible;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    
+    & .btn-search-bar-cross {
+        animation-name: btn-search-bar-cross-not-visible;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+}
+
+.search-bar-cross-visible {
+    animation-name: search-bar-cross-visible;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    & .btn-search-bar-cross {
+        animation-name: btn-search-bar-cross-visible;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+}

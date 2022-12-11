@@ -1,0 +1,23 @@
+.border {
+    @each $size, $i in $sizes {
+        &-rad-#{$size} {
+            border-radius: $i;
+        }
+    }
+
+    @each $color, $i in $colors {
+        &-#{$color} {
+            border-color: $i;
+        }
+    }
+
+    @each $size, $i in $sizes {
+        &-#{$size} {
+            border-width: $i;
+        }
+    }
+
+    &-none {
+        border: none;
+    }
+}

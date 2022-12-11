@@ -1,0 +1,22 @@
+.print {
+    &-min-w {
+        @media screen and (max-width: 799px) {
+            &-800 {
+                display: none;
+            }
+        }
+    }
+
+    &-max-w {
+        @media screen and (min-width: 800px) {
+            &-800 {
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+
+  

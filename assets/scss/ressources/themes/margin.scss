@@ -1,0 +1,47 @@
+.margin {
+    @each $size, $i in $specific_sizes {
+        &-#{$size} {
+            margin: $i;
+        }
+
+        &-left-#{$size} {
+            margin-left: $i;
+        }
+
+        &-right-#{$size} {
+            margin-right: $i;
+        }
+
+        &-top-#{$size} {
+            margin-top: $i;
+        }
+
+        &-bottom-#{$size} {
+            margin-bottom: $i;
+        }
+    }
+}
+
+.margin {
+    @each $size, $i in $sizes {
+        &-#{$size} {
+            margin: $i;
+        }
+
+        &-left-#{$size} {
+            margin-left: $i;
+        }
+
+        &-right-#{$size} {
+            margin-right: $i;
+        }
+
+        &-top-#{$size} {
+            margin-top: $i;
+        }
+
+        &-bottom-#{$size} {
+            margin-bottom: $i;
+        }
+    }
+}

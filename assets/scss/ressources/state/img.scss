@@ -1,0 +1,16 @@
+.img {
+    &-resp {
+        max-height: 100%;
+        max-width: 100%;
+    }
+}
+
+
+.responsive {
+    &-img img {
+        position: relative;
+        right: 50%;
+        max-height: 100%;
+        background-color: red;
+    }
+}

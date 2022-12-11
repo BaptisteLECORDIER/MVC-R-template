@@ -1,0 +1,45 @@
+.padding {
+    @each $size, $i in $sizes {
+        &-#{$size} {
+            padding: $i;
+        }
+
+        &-left-#{$size} {
+            padding-left: $i;
+        }
+
+        &-right-#{$size} {
+            padding-right: $i;
+        }
+
+        &-top-#{$size} {
+            padding-top: $i;
+        }
+
+        &-bottom-#{$size} {
+            padding-bottom: $i;
+        }
+    }
+
+    @each $size, $i in $specific_sizes {
+        &-#{$size} {
+            padding: $i;
+        }
+
+        &-left-#{$size} {
+            padding-left: $i;
+        }
+
+        &-right-#{$size} {
+            padding-right: $i;
+        }
+
+        &-top-#{$size} {
+            padding-top: $i;
+        }
+
+        &-bottom-#{$size} {
+            padding-bottom: $i;
+        }
+    }
+}

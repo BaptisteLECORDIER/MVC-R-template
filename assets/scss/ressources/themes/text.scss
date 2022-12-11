@@ -1,0 +1,19 @@
+.txt {
+    @each $color, $i in $colors {
+        &-#{$color} {
+            color: $i;
+        }
+    }
+
+    @each $size, $i in $sizes {
+        &-#{$size} {
+            font-size: $i;
+        }
+    }
+
+    &-cut { 
+        text-overflow: ellipsis;
+        overflow: hidden; 
+        white-space: nowrap;
+    }
+}

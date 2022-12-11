@@ -1,0 +1,35 @@
+.bg {
+    &-none {
+        background: none;
+    }
+
+    @each $color, $i in $colors {
+        &-#{$color} {
+            background-color: $i;
+        }
+    }
+
+    @each $color, $i in $colors {
+        &-#{$color}-hover {
+            background-color: $i;
+        }
+    }
+
+    @each $color_hover, $i in $colors_hover {
+        &-#{$color_hover}-hover:hover {
+            background-color: $i;
+        }
+    }
+
+    @each $color_txt, $i in $colors_txt {
+        &-#{$color_txt}-hover * {
+            color: $i;
+        }
+    }
+
+    @each $color_txt_hover, $i in $colors_txt_hover {
+        &-#{$color_txt_hover}-hover:hover * {
+            color: $i;
+        }
+    }
+}
